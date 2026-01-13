@@ -51,7 +51,7 @@ export default function SiteSettings() {
               <Tab.Content className="p-0">
                 <Container className="admin-table p-0">
                   <div className="ps-4 pe-4 pt-4">
-                    <h3>{ t('admin.site_settings.customize_greenlight') }</h3>
+                    <h3>{ t('admin.site_settings.customize_platform') }</h3>
                   </div>
                   <Tabs className="border-bottom ps-3" defaultActiveKey="appearance" unmountOnExit>
                     <Tab className="p-4" eventKey="appearance" title={t('admin.site_settings.appearance.appearance')}>
