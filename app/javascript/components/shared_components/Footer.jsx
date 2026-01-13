@@ -17,6 +17,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Container } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import useEnv from '../../hooks/queries/env/useEnv';
 import useSiteSetting from '../../hooks/queries/site_settings/useSiteSetting';
 import { useAuth } from '../../contexts/auth/AuthProvider';
@@ -31,8 +32,8 @@ export default function Footer() {
   return (
     <footer id="footer" className="footer background-whitesmoke text-center">
       <Container id="footer-container" className="py-3">
-        <a href="https://docs.bigbluebutton.org/greenlight/v3/install" target="_blank" rel="noreferrer">Greenlight</a>
-        { isAdmin && <span className="text-muted"> {env?.VERSION_TAG} </span> }
+        <Link to="/about" className="footer-link">{t('about')}</Link>
+        { isAdmin && <span className="text-muted ms-2"> {env?.VERSION_TAG} </span> }
         { links?.Terms
           && (
             <a className="ps-3" href={links?.Terms} target="_blank" rel="noreferrer">
