@@ -52,6 +52,7 @@ import RootBoundary from './RootBoundary';
 import Tenants from './components/admin/tenants/Tenants';
 import RoomIdRouter from './routes/RoomIdRouter';
 import PublicRecordings from './components/rooms/room/public_recordings/PublicRecordings';
+import AboutPage from './components/home/AboutPage';
 
 const queryClientConfig = {
   defaultOptions: {
@@ -71,6 +72,7 @@ const router = createBrowserRouter(
       errorElement={<RootBoundary />}
     >
       <Route index element={<HomePage />} />
+      <Route path="/about" element={<AboutPage />} />
 
       <Route element={<UnauthenticatedOnly />}>
         <Route path="/signup" element={<Signup />} />
