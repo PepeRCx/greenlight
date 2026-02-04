@@ -25,8 +25,8 @@ class PopulateSiteSettings < ActiveRecord::Migration[7.0]
     end
 
     SiteSetting.create! [
-      { setting: Setting.find_by(name: 'PrimaryColor'), value: '#467fcf', provider: 'greenlight' },
-      { setting: Setting.find_by(name: 'PrimaryColorLight'), value: '#e8eff9', provider: 'greenlight' },
+      { setting: Setting.find_by(name: 'PrimaryColor'), value: '#1800AD', provider: 'greenlight' },
+      { setting: Setting.find_by(name: 'PrimaryColorLight'), value: '#E8E6F7', provider: 'greenlight' },
       { setting: Setting.find_by(name: 'PrimaryColorDark'), value: '#316cbe', provider: 'greenlight' },
       { setting: Setting.find_by(name: 'BrandingImage'),
         value: image_path,
